@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Account - aNotepad</title>
+    <link rel="stylesheet" crossorigin href="/assets/style-DXmdwqsZ.css">
+  </head>
+  <body>
+    <header class="nav-header">
+      <div class="nav-container">
+        <a href="/" class="logo">aNotepad</a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">☰</button>
+        <nav class="nav-links" id="navLinks">
+          <a href="/">Notepad</a>
+          <a href="/templates/">Templates</a>
+          <a href="/markdown/">Markdown</a>
+          <a href="/tasklist/">Tasklist</a>
+          <a href="/create_account/" class="active">Sign Up</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <div class="container auth-container">
+        <h1>Create Account</h1>
+        <form class="auth-form" onsubmit="event.preventDefault(); alert('Account created successfully!');">
+          <label>Email address</label>
+          <input type="email" placeholder="you@example.com" required />
+          <label>Password</label>
+          <input type="password" placeholder="••••••••" required />
+          <button type="submit" class="tb-btn primary-btn">Sign Up</button>
+        </form>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-container">
+        <div class="footer-col">
+          <h4>aNotepad</h4>
+          <a href="/">Home</a>
+        </div>
+      </div>
+    </footer>
+    <script>
+      const toggle = document.getElementById('menuToggle');
+      const links = document.getElementById('navLinks');
+      if (toggle && links) {
+        toggle.addEventListener('click', () => links.classList.toggle('active'));
+      }
+    </script>
+  </body>
+</html>

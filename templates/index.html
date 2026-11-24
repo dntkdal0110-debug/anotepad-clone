@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Templates - aNotepad</title>
+    <link rel="stylesheet" crossorigin href="/assets/style-DXmdwqsZ.css">
+  </head>
+  <body>
+    <header class="nav-header">
+      <div class="nav-container">
+        <a href="/" class="logo">aNotepad</a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">☰</button>
+        <nav class="nav-links" id="navLinks">
+          <a href="/">Notepad</a>
+          <a href="/templates/" class="active">Templates</a>
+          <a href="/markdown/">Markdown</a>
+          <a href="/tasklist/">Tasklist</a>
+          <a href="/create_account/">Sign Up</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <div class="container">
+        <h1>Note Templates</h1>
+        <p class="subtitle">Choose a template to start writing quickly.</p>
+        <div class="features-grid">
+          <article class="feature-card">
+            <h3>Meeting Notes</h3>
+            <p>Agenda, attendees, action items, and discussion points.</p>
+          </article>
+          <article class="feature-card">
+            <h3>To-Do List</h3>
+            <p>Daily tasks, priorities, and deadlines checklist.</p>
+          </article>
+          <article class="feature-card">
+            <h3>Journal Entry</h3>
+            <p>Daily reflections, gratitude, and personal thoughts.</p>
+          </article>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-container">
+        <div class="footer-col">
+          <h4>aNotepad</h4>
+          <a href="/">Home</a>
+          <a href="/templates/">Templates</a>
+        </div>
+      </div>
+    </footer>
+    <script>
+      const toggle = document.getElementById('menuToggle');
+      const links = document.getElementById('navLinks');
+      if (toggle && links) {
+        toggle.addEventListener('click', () => links.classList.toggle('active'));
+      }
+    </script>
+  </body>
+</html>

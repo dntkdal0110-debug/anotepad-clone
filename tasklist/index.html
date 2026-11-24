@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task List - aNotepad</title>
+    <link rel="stylesheet" crossorigin href="/assets/style-DXmdwqsZ.css">
+  </head>
+  <body>
+    <header class="nav-header">
+      <div class="nav-container">
+        <a href="/" class="logo">aNotepad</a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">☰</button>
+        <nav class="nav-links" id="navLinks">
+          <a href="/">Notepad</a>
+          <a href="/templates/">Templates</a>
+          <a href="/markdown/">Markdown</a>
+          <a href="/tasklist/" class="active">Tasklist</a>
+          <a href="/create_account/">Sign Up</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <div class="container">
+        <h1>Task List</h1>
+        <div class="notepad-box">
+          <div class="notepad-toolbar">
+            <span class="tb-title">Task Mode</span>
+          </div>
+          <textarea class="notepad-textarea" placeholder="- [ ] First task\n- [ ] Second task"></textarea>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-container">
+        <div class="footer-col">
+          <h4>aNotepad</h4>
+          <a href="/">Home</a>
+        </div>
+      </div>
+    </footer>
+    <script>
+      const toggle = document.getElementById('menuToggle');
+      const links = document.getElementById('navLinks');
+      if (toggle && links) {
+        toggle.addEventListener('click', () => links.classList.toggle('active'));
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Online Notepad - Take Notes and Share Notes Online</title>
+    <link rel="stylesheet" crossorigin href="/assets/style-DXmdwqsZ.css">
+  </head>
+  <body>
+    <header class="nav-header">
+      <div class="nav-container">
+        <a href="/" class="logo">aNotepad</a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">☰</button>
+        <nav class="nav-links" id="navLinks">
+          <a href="/">Notepad</a>
+          <a href="/templates/">Templates</a>
+          <a href="/markdown/">Markdown</a>
+          <a href="/tasklist/">Tasklist</a>
+          <a href="/create_account/">Sign Up</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <div class="container">
+        <h1 class="visually-hidden">Online Notepad</h1>
+        <div class="notepad-box">
+          <div class="notepad-toolbar">
+            <button class="tb-btn">Save</button>
+            <button class="tb-btn">Settings</button>
+            <select class="tb-select">
+              <option>Plain Text</option>
+              <option>Rich Text</option>
+              <option>Markdown</option>
+              <option>Task List</option>
+            </select>
+          </div>
+          <div class="drop-zone">
+            <p>Drag and drop document here</p>
+            <p>Drag and drop files here</p>
+          </div>
+          <textarea class="notepad-textarea" placeholder="Type or paste your note here..."></textarea>
+        </div>
+
+        <section class="features-section">
+          <h2>Everything you can do with aNotepad</h2>
+          <div class="features-grid">
+            <article class="feature-card">
+              <h3>Save and share your notes</h3>
+              <p>Create notes online without hassle. Share them with anyone via simple web links.</p>
+            </article>
+            <article class="feature-card">
+              <h3>Autosave — never lose a note</h3>
+              <p>Your notes are automatically saved to your browser storage as you type.</p>
+            </article>
+            <article class="feature-card">
+              <h3>No sign-up required</h3>
+              <p>Start taking notes immediately. No registration or login necessary for basic notes.</p>
+            </article>
+            <article class="feature-card">
+              <h3>Private and secure</h3>
+              <p>Set your notes to private or password-protect them for extra security.</p>
+            </article>
+            <article class="feature-card">
+              <h3>Download as PDF or Word</h3>
+              <p>Easily export your notes into PDF, Word document, or plain text files.</p>
+            </article>
+            <article class="feature-card">
+              <h3>Plain text, rich text, Markdown, tasks and more</h3>
+              <p>Choose the editor format that best fits your journaling and productivity needs.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="faq-section">
+          <h2>Frequently asked questions</h2>
+          <div class="faq-item">
+            <button class="faq-question">Is aNotepad free?</button>
+            <div class="faq-answer">Yes! aNotepad is 100% free to use for taking and sharing notes online.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">Do I need an account to take notes?</button>
+            <div class="faq-answer">No account is needed to start taking notes instantly.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">Are my notes saved automatically?</button>
+            <div class="faq-answer">Yes, notes autosave locally in your browser so you never lose your work.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">Can I share a note with someone?</button>
+            <div class="faq-answer">Simply copy the note URL and send it to anyone you want to share with.</div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-container">
+        <div class="footer-col">
+          <h4>aNotepad</h4>
+          <a href="/">Home</a>
+          <a href="/templates/">Templates</a>
+          <a href="/markdown/">Markdown</a>
+          <a href="/tasklist/">Tasklist</a>
+        </div>
+        <div class="footer-col">
+          <h4>Share & Sell</h4>
+          <a href="/create_account/">Create Account</a>
+          <a href="#">Developers</a>
+          <a href="#">Tools</a>
+          <a href="#">Legal</a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      const menuToggle = document.getElementById('menuToggle');
+      const navLinks = document.getElementById('navLinks');
+      if (menuToggle && navLinks) {
+        menuToggle.addEventListener('click', () => {
+          navLinks.classList.toggle('active');
+        });
+      }
+
+      document.querySelectorAll('.faq-question').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const answer = btn.nextElementSibling;
+          if (answer) {
+            answer.classList.toggle('open');
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
